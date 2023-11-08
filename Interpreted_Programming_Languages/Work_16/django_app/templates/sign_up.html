@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'css/sign_up.css' %}" />
+        <title>Страница регистрации</title>
+    </head>
+    <body style="background-image: url('{% static "images/home_back.jpg" %}');">
+        <div>
+            <h3>Форма для <span style="color: orange;">регистрации</span></h3>
+            <div class="container">
+                <form action="sign_up_sending" method="POST">
+                    {% csrf_token %}
+                    <p>Фамилия</p>
+                    <input name="surname" type="text">
+                    <br />
+                    <p>Имя</p>
+                    <input name="name" type="text">
+                    <br />
+                    <p>Отчество</p>
+                    <input name="patronymic" type="text">
+                    <br />
+                    <p>Почта</p>
+                    <input name="email" type="email">
+                    <br />
+                    <p>Пароль</p>
+                    <input id="passwordInput" name="password" type="password">
+                    <br />
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
