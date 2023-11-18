@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+        <title>Рабочая страница</title>
+        <style>
+            h3
+            {
+                color: orange;
+                margin-top: 0px;
+            }
+            .horizontal-zone
+            {
+                width: 800px;
+                display: flex;
+                justify-content: space-evenly;
+                gap: 35px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -125px;
+                border: 5px solid #555;
+                border-radius: 20px;
+            }
+            .vertical-zone
+            {
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            select
+            {
+                width: 200px;
+                margin-top: -8px;
+                padding: 5px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+                background-color: #999;
+            }
+            textarea
+            {
+                margin-top: 3px;
+                width: 800px;
+                height: 500px;
+                background-color: transparent;
+                border: 5px solid #555;
+                border-radius: 20px;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body style="background-image: url('{% static "images/home_back.jpg" %}');">
+        <div>
+            <form>
+                <div class="horizontal-zone">
+                    <div class="vertical-zone">
+                        <h3>Таблица</h3>
+                        <select>
+                            <option>Subjects</option>
+                            <option>Teachers</option>
+                            <option>Listeners</option>
+                            <option>AcademicRecords</option>
+                            <option>Group1</option>
+                            <option>Group2</option>
+                            <option>Group3</option>
+                            <option>Group4</option>
+                            <option>Group5</option>
+                        </select>
+                    </div>
+                    <div class="vertical-zone">
+                        <h3>Действие</h3>
+                        <select>
+                            <option>Вывести всё</option>
+                            <option>Добавить данные</option>
+                            <option>Изменить/удалить</option>
+                        </select>
+                    </div>
+                    <div class="vertical-zone">
+                        <button style="margin-top: 15px;" type="button">Выбрать</button>
+                    </div>
+                </div>
+                <textarea readonly></textarea>
+            </form>
+        </div>
+    </body>
+</html>
